@@ -53,6 +53,14 @@
   font-size: 16px;
   line-height: 24px;
   text-decoration: none;
+
+  transition: all 0.2s ease-in;
+  &:visited {
+    color: $greyNavbar;
+  }
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 .nav__link_active {
@@ -80,6 +88,11 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
+
+  transition: all 0.2s ease-in;
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
 .nav__burger_btn {
@@ -110,11 +123,12 @@
   .nav {
     width: 90%;
   }
+
   .nav__wrapper_links {
     position: absolute;
     left: 0px;
     top: 0px;
-    width: 100%;
+    width: 100vh;
     background-color: $greenColor;
     padding: 30px 30px 30px 30px;
     transition: transform 0.4s;
@@ -130,6 +144,7 @@
       transform: translateY(0);
     }
   }
+
   .nav__link_active {
     &::before {
       content: none;

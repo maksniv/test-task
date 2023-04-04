@@ -50,7 +50,7 @@ const Navbar = () => {
       <button className={styles.nav__button}>Sign Up</button>
       <button
         onClick={() => setMenuActive(!menuActive)}
-        class={styles.nav__burger_btn}
+        className={styles.nav__burger_btn}
       >
         <span></span>
         <span></span>
