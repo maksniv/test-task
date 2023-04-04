@@ -3,9 +3,8 @@
 .home__wrapper {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 
-  margin: 138px auto;
   height: 100%;
   width: 80%;
 
@@ -28,14 +27,11 @@
   color: $blackTitle;
   margin-bottom: 22px;
   .home__title {
-    width: 375px;
-    line-height: 65px;
     span {
       color: $orangeTitle;
     }
   }
   .home__title2 {
-    width: 475px;
     line-height: 72px;
   }
 }
@@ -45,7 +41,7 @@
   font-size: 15px;
   line-height: 26px;
 
-  width: 444px;
+  width: 100%;
   color: $grayDescription;
 
   margin-bottom: 30px;
@@ -69,12 +65,11 @@
 
 .home__images_block {
   position: relative;
-  width: 50%;
 }
 
 .home__image_woman {
   position: absolute;
-  bottom: 0px;
+  top: 70px;
   right: 100px;
 
   height: 557px;
@@ -88,7 +83,7 @@
 .home__image_circle {
   position: absolute;
 
-  bottom: 200px;
+  top: 130px;
   right: 160px;
 
   width: 280px;
@@ -100,7 +95,8 @@
 
 .home__image_langs {
   position: absolute;
-  bottom: 170px;
+
+  top: 10px;
   right: 76px;
 
   border: 2px solid $grayCircle;
@@ -192,5 +188,211 @@
   }
   100% {
     transform: rotateZ(360deg);
+  }
+}
+
+@media (max-width: 576px) {
+  //iphone
+  .home__wrapper {
+    margin: 0px auto;
+    min-width: 90%;
+  }
+  .home__content {
+    width: 100%;
+  }
+  .home__images_block {
+    padding-top: 50px;
+    width: 100%;
+  }
+  .home__title_wrapper {
+    font-size: 25px;
+  }
+  .home__title {
+    line-height: 35px;
+    width: 65%;
+  }
+  .home__title2 {
+    width: 100%;
+  }
+  .home__images_block {
+    position: relative;
+    width: 100%;
+    height: 650px;
+  }
+
+  .home__image_woman {
+    position: absolute;
+    top: 90px;
+    right: -70px;
+  }
+
+  .home__image_circle {
+    position: absolute;
+
+    top: 150px;
+    right: 0px;
+  }
+
+  .home__image_langs {
+    position: absolute;
+
+    top: 30px;
+    right: -85px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  //ipad mini
+  .home__wrapper {
+    margin: 70px auto;
+    width: 90%;
+  }
+  .home__content {
+    width: 100%;
+  }
+  .home__images_block {
+    width: 100%;
+  }
+  .home__title {
+    line-height: 65px;
+    width: 60%;
+  }
+  .home__title2 {
+    width: 80%;
+  }
+  .home__images_block {
+    position: relative;
+    width: 100%;
+    height: 650px;
+  }
+
+  .home__image_woman {
+    position: absolute;
+    top: 100px;
+    right: 150px;
+  }
+
+  .home__image_circle {
+    position: absolute;
+
+    top: 170px;
+    right: 200px;
+  }
+
+  .home__image_langs {
+    position: absolute;
+
+    top: 50px;
+    right: 100px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  //ipad pro
+  .home__wrapper {
+    margin: 100px auto;
+    width: 90%;
+  }
+  .home__content {
+    width: 100%;
+  }
+  .home__images_block {
+    width: 100%;
+  }
+  .home__title {
+    line-height: 65px;
+    width: 60%;
+  }
+  .home__title2 {
+    width: 80%;
+  }
+  .home__images_block {
+    position: relative;
+    width: 100%;
+    height: 650px;
+  }
+
+  .home__image_woman {
+    position: absolute;
+    top: 100px;
+    right: -20px;
+  }
+
+  .home__image_circle {
+    position: absolute;
+
+    top: 170px;
+    right: 40px;
+  }
+
+  .home__image_langs {
+    position: absolute;
+
+    top: 50px;
+    right: -40px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1024px) {
+  //computer
+  .home__wrapper {
+    margin: 100px auto;
+    width: 80%;
+  }
+  .home__content {
+    width: 50%;
+  }
+  .home__images_block {
+    width: 50%;
+  }
+  .home__title {
+    line-height: 65px;
+    width: 70%;
+  }
+  .home__title2 {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .home__wrapper {
+    margin: 138px auto;
+    width: 80%;
+  }
+  .home__content {
+    width: 50%;
+  }
+  .home__images_block {
+    width: 50%;
+  }
+  .home__title {
+    line-height: 65px;
+    width: 60%;
+  }
+  .home__title2 {
+    width: 80%;
+  }
+  .home__images_block {
+    position: relative;
+  }
+
+  .home__image_woman {
+    position: absolute;
+    top: 70px;
+    right: 100px;
+  }
+
+  .home__image_circle {
+    position: absolute;
+
+    top: 130px;
+    right: 160px;
+  }
+
+  .home__image_langs {
+    position: absolute;
+
+    top: 10px;
+    right: 76px;
   }
 }

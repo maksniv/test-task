@@ -17,7 +17,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className={styles.home__wrapper}>
+    <main className={styles.home__wrapper}>
       <div className={styles.home__content}>
         <div className={styles.home__title_wrapper}>
           <div className={styles.home__title}>
@@ -41,7 +41,7 @@ const Home = () => {
           <div className={styles.home__image_lang_IND3}></div>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 

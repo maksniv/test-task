@@ -1,7 +1,6 @@
 @import 'src/styles/variables';
 
-.header {
-  width: 80%;
+.nav {
   margin: 30px auto;
 
   display: flex;
@@ -15,14 +14,14 @@
   font-style: normal;
 }
 
-.header__logo_wrapper {
+.nav__logo_wrapper {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   gap: 8px;
 }
 
-.header__logo {
+.nav__logo {
   color: $greenColor;
   border: 4px solid $orangeLogoColor;
   border-radius: 100px;
@@ -34,7 +33,7 @@
   line-height: 33px;
 }
 
-.header__logo_text {
+.nav__logo_text {
   width: 100%;
   padding: 5px;
 
@@ -45,23 +44,18 @@
   line-height: 38px;
 }
 
-.header__wrapper_links {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  gap: 40px;
-
+.nav__wrapper_links {
   color: $greyNavbar;
 }
 
-.header__link {
+.nav__link {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   text-decoration: none;
 }
 
-.header__link_active {
+.nav__link_active {
   position: relative;
   &::before {
     content: '';
@@ -76,7 +70,7 @@
   }
 }
 
-.header__button {
+.nav__button {
   color: $whiteColor;
   border: none;
   padding: 9px 23px 9px 23px;
@@ -86,4 +80,56 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
+}
+
+@media (max-width: 576px) {
+  //iphone
+  .nav {
+    width: 100%;
+  }
+  .nav__wrapper_links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 576px) {
+  //ipad mini
+  .nav {
+    width: 100%;
+  }
+  .nav__wrapper_links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  //ipad pro
+  .nav {
+    width: 90%;
+  }
+  .nav__wrapper_links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  //computer
+  .nav {
+    width: 80%;
+  }
+  .nav__wrapper_links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 40px;
+  }
 }

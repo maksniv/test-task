@@ -2,16 +2,17 @@ import { NavLink } from 'react-router-dom';
 import styles from './Navbar.module.scss';
 
 const Navbar = () => {
-  const activeLink = styles.header__link_active + ' ' + styles.header__link;
-  const normalLink = styles.header__link;
+  const activeLink = styles.nav__link_active + ' ' + styles.nav__link;
+  const normalLink = styles.nav__link;
 
   return (
-    <header className={styles.header}>
-      <div className={styles.header__logo_wrapper}>
-        <div className={styles.header__logo}>G</div>
-        <div className={styles.header__logo_text}>Global</div>
+    <nav className={styles.nav}>
+      {/* <div className='burger-btn'></div> */}
+      <div className={styles.nav__logo_wrapper}>
+        <div className={styles.nav__logo}>G</div>
+        <div className={styles.nav__logo_text}>Global</div>
       </div>
-      <div className={styles.header__wrapper_links}>
+      <div className={styles.nav__wrapper_links}>
         <NavLink
           to="/home"
           className={({ isActive }) => (isActive ? activeLink : normalLink)}
@@ -37,8 +38,8 @@ const Navbar = () => {
           Help
         </NavLink>
       </div>
-      <button className={styles.header__button}>Sign Up</button>
-    </header>
+      <button className={styles.nav__button}>Sign Up</button>
+    </nav>
   );
 };
 
