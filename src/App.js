@@ -11,7 +11,7 @@ function App() {
     <>
       <Navbar />
       <Routes>
-        <Route path="/home" element={<Home />} />
+        <Route path="/test-task/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/rate" element={<Rate />} />
         <Route path="*" element={<PageNotFound />} />

@@ -1,20 +1,29 @@
 import { NavLink } from 'react-router-dom';
 import styles from './Navbar.module.scss';
+import { useState } from 'react';
 
 const Navbar = () => {
+  const [menuActive, setMenuActive] = useState(false);
+
   const activeLink = styles.nav__link_active + ' ' + styles.nav__link;
   const normalLink = styles.nav__link;
+  // const classOpen = menuActive ? 'active' : '';
 
   return (
     <nav className={styles.nav}>
-      {/* <div className='burger-btn'></div> */}
       <div className={styles.nav__logo_wrapper}>
         <div className={styles.nav__logo}>G</div>
         <div className={styles.nav__logo_text}>Global</div>
       </div>
-      <div className={styles.nav__wrapper_links}>
+      <div
+        className={
+          menuActive
+            ? [styles.nav__wrapper_links, styles.active].join(' ')
+            : [styles.nav__wrapper_links]
+        }
+      >
         <NavLink
-          to="/home"
+          to="/test-task/"
           className={({ isActive }) => (isActive ? activeLink : normalLink)}
         >
           Mobile Top Up
@@ -39,6 +48,14 @@ const Navbar = () => {
         </NavLink>
       </div>
       <button className={styles.nav__button}>Sign Up</button>
+      <button
+        onClick={() => setMenuActive(!menuActive)}
+        class={styles.nav__burger_btn}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </nav>
   );
 };

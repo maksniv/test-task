@@ -82,34 +82,67 @@
   line-height: 24px;
 }
 
+.nav__burger_btn {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  z-index: 2;
+  span {
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    left: 5px;
+    transition: all 0.25s ease-in;
+    &:nth-child(1) {
+      transform: translateY(-10px);
+    }
+    &:nth-child(3) {
+      transform: translateY(10px);
+    }
+  }
+}
+
 @media (max-width: 576px) {
   //iphone
   .nav {
-    width: 100%;
+    width: 90%;
   }
   .nav__wrapper_links {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    background-color: $greenColor;
+    padding: 30px 30px 30px 30px;
+    transition: transform 0.4s;
+
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: nowrap;
+
     gap: 20px;
+
+    transform: translateY(-100%);
+    &.active {
+      transform: translateY(0);
+    }
+  }
+  .nav__link_active {
+    &::before {
+      content: none;
+    }
+  }
+
+  .nav__burger_btn {
+    display: block;
   }
 }
 
-@media (max-width: 768px) and (min-width: 576px) {
+@media (min-width: 577px) and (max-width: 768px) {
   //ipad mini
-  .nav {
-    width: 100%;
-  }
-  .nav__wrapper_links {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 20px;
-  }
-}
-
-@media (max-width: 1024px) and (min-width: 768px) {
-  //ipad pro
   .nav {
     width: 90%;
   }
@@ -117,11 +150,30 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: 20px;
+    gap: 30px;
+  }
+  .nav__burger_btn {
+    display: none;
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
+  //ipad pro
+  .nav {
+    width: 80%;
+  }
+  .nav__wrapper_links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 40px;
+  }
+  .nav__burger_btn {
+    display: none;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1400px) {
   //computer
   .nav {
     width: 80%;
@@ -131,5 +183,23 @@
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 40px;
+  }
+  .nav__burger_btn {
+    display: none;
+  }
+}
+
+@media (min-width: 1401px) {
+  .nav {
+    width: 80%;
+  }
+  .nav__wrapper_links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 40px;
+  }
+  .nav__burger_btn {
+    display: none;
   }
 }
