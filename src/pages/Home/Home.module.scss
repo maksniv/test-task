@@ -241,7 +241,7 @@
   }
 }
 
-@media (min-width: 576px) and (max-width: 768px) {
+@media (min-width: 577px) and (max-width: 768px) {
   //ipad mini
   .home__wrapper {
     margin: 70px auto;
@@ -287,7 +287,7 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   //ipad pro
   .home__wrapper {
     margin: 100px auto;
@@ -315,25 +315,25 @@
   .home__image_woman {
     position: absolute;
     top: 100px;
-    right: -20px;
+    right: 280px;
   }
 
   .home__image_circle {
     position: absolute;
 
     top: 170px;
-    right: 40px;
+    right: 335px;
   }
 
   .home__image_langs {
     position: absolute;
 
     top: 50px;
-    right: -40px;
+    right: 250px;
   }
 }
 
-@media (min-width: 1024px) and (max-width: 1024px) {
+@media (min-width: 1025px) and (max-width: 1400px) {
   //computer
   .home__wrapper {
     margin: 100px auto;
@@ -352,9 +352,33 @@
   .home__title2 {
     width: 80%;
   }
+  .home__images_block {
+    position: relative;
+    width: 50%;
+  }
+
+  .home__image_woman {
+    position: absolute;
+    top: 100px;
+    right: -20px;
+  }
+
+  .home__image_circle {
+    position: absolute;
+
+    top: 170px;
+    right: 40px;
+  }
+
+  .home__image_langs {
+    position: absolute;
+
+    top: 50px;
+    right: -40px;
+  }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1401px) {
   .home__wrapper {
     margin: 138px auto;
     width: 80%;
