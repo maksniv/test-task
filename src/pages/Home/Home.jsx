@@ -3,6 +3,7 @@ import Users from '../../components/Users/Users';
 import styles from './Home.module.scss';
 import { getDescription } from '../../utils/textAPI';
 import { useEffect, useState } from 'react';
+import { Transition } from 'react-transition-group';
 
 const Home = () => {
   const [text, setText] = useState('');
@@ -33,13 +34,15 @@ const Home = () => {
       <div className={styles.home__images_block}>
         <div className={styles.home__image_woman}></div>
         <div className={styles.home__image_circle}></div>
-        <div className={styles.home__image_langs}>
-          <div className={styles.home__image_lang_IND1}></div>
-          <div className={styles.home__image_lang_ENG}></div>
-          <div className={styles.home__image_lang_ITL}></div>
-          <div className={styles.home__image_lang_IND2}></div>
-          <div className={styles.home__image_lang_IND3}></div>
-        </div>
+        <Transition>
+          <div className={styles.home__image_langs}>
+            <div className={styles.home__image_lang_IND1}></div>
+            <div className={styles.home__image_lang_ENG}></div>
+            <div className={styles.home__image_lang_ITL}></div>
+            <div className={styles.home__image_lang_IND2}></div>
+            <div className={styles.home__image_lang_IND3}></div>
+          </div>
+        </Transition>
       </div>
     </main>
   );
