@@ -1,0 +1,42 @@
+@import 'src/styles/variables';
+
+.home__users_avatars {
+  display: inline-flex;
+  flex-direction: row-reverse;
+}
+
+.home__users_avatar {
+  position: relative;
+  border-radius: 50%;
+  border: 3px solid $whiteColor;
+  overflow: hidden;
+  width: 38px;
+  img {
+    margin: auto;
+    width: 100%;
+    display: block;
+  }
+  &:not(:last-child) {
+    margin-left: -16px;
+  }
+}
+
+.home__users_wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.home__users_text {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: $grayUsersText;
+  span {
+    color: $orangeUsersText;
+  }
+}

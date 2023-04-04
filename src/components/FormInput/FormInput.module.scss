@@ -1,0 +1,70 @@
+@import 'src/styles/variables';
+
+.container__form {
+  position: relative;
+  display: flex;
+  max-width: 100%;
+  margin-bottom: 40px;
+}
+
+.container__form_input {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.01em;
+  color: $grayFormInputText;
+
+  padding: 21px 67px 22px 38px;
+  width: 100%;
+
+  border: none;
+  background: $whiteColor;
+  box-shadow: 0px 20px 30px rgba(222, 222, 222, 0.25);
+  border-radius: 100px;
+  &:focus {
+    color: $blackTitle;
+  }
+}
+
+.container__form_errors {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.01em;
+  color: $grayFormInputText;
+  
+  position: absolute;
+  left: 37px;
+  bottom: -45px;
+}
+
+.container__form_button {
+  width: 55px;
+  height: 55px;
+
+  position: absolute;
+  right: 5px;
+  top: 4px;
+
+  background: $greenColor;
+  border-radius: 50px;
+  color: $whiteColor;
+  padding: 17px 20px 20px 17px;
+  border: none;
+
+  background-image: url('/img/search.png');
+  background-position: center;
+  background-repeat: no-repeat;
+
+  transition: all 0.25s ease-in;
+  &:disabled {
+    background: $greenDisabledButton;
+    background-image: url('/img/search.png');
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
