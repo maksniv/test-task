@@ -7,7 +7,6 @@ const Navbar = () => {
 
   const activeLink = styles.nav__link_active + ' ' + styles.nav__link;
   const normalLink = styles.nav__link;
-  // const classOpen = menuActive ? 'active' : '';
 
   return (
     <nav className={styles.nav}>
@@ -18,8 +17,8 @@ const Navbar = () => {
       <div
         className={
           menuActive
-            ? [styles.nav__wrapper_links, styles.active].join(' ')
-            : [styles.nav__wrapper_links]
+            ? styles.nav__wrapper_links + ' ' + styles.active
+            : styles.nav__wrapper_links
         }
       >
         <NavLink
