@@ -41,7 +41,7 @@ const Navbar = () => {
           Rate
         </NavLink>
         <NavLink
-          to="*"
+          to="/help"
           className={({ isActive }) => (isActive ? activeLink : normalLink)}
         >
           Help

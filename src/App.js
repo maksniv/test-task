@@ -5,6 +5,7 @@ import Home from './pages/Home/Home';
 import PageNotFound from './pages/PageNotFound/PageNotFound';
 import About from './pages/About/About';
 import Rate from './pages/Rate/Rate';
+import Help from './pages/Help/Help';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/test-task/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/rate" element={<Rate />} />
+        <Route path="/help" element={<Help />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </>
